@@ -103,42 +103,25 @@ class block_cocoon_hero_5 extends block_base {
       <div class="col-lg-8">
         <div class="home-content home10">
           <div class="home-text">
-            <h2 data-ccn="title">'.format_text($this->content->title, FORMAT_HTML, array('filter' => true)).'</h2>
-            <p data-ccn="subtitle" class="color-white">'.format_text($this->content->subtitle, FORMAT_HTML, array('filter' => true)).'</p>
-            <div class="search_box_home4 home10">
-              <div class="ht_search_widget">
-                <div class="header_search_widget">';
-                // Begin Search form
-                if (\core_search\manager::is_global_search_enabled() === false) {
-                    $this->content->text = get_string('globalsearchdisabled', 'search');
-                    return $this->content;
-                }
-
-                $url = new moodle_url('/search/index.php');
-
-                $this->content->text .= html_writer::start_tag('form', array('class' => 'form-inline mailchimp_form', 'action' => $url->out()));
-                $this->content->text .= html_writer::start_tag('fieldset', array('action' => 'invisiblefieldset'));
-
-                // Input.
-                $inputoptions = array('id' => 'searchform_search', 'name' => 'q', 'class' => 'form-control mb-2 mr-sm-2', 'placeholder' => get_string('search_string', 'theme_edumy'),
-                    'type' => 'text', 'size' => '15');
-                $this->content->text .= html_writer::empty_tag('input', $inputoptions);
-
-                // Context id.
-                if ($this->page->context && $this->page->context->contextlevel !== CONTEXT_SYSTEM) {
-                    $this->content->text .= html_writer::empty_tag('input', ['type' => 'hidden',
-                            'name' => 'context', 'value' => $this->page->context->id]);
-                }
-
-                $this->content->text .= '<button type="submit" class="btn btn-primary mb-2"><span class="flaticon-magnifying-glass"></span></button>';
-                $this->content->text .= html_writer::end_tag('fieldset');
-                $this->content->text .= html_writer::end_tag('form');
-                // End Search form
-
-                $this->content->text .='
-                </div>
-              </div>
-            </div>
+            <h2 data-ccn="title" class="color-black-mod" >'.format_text($this->content->title, FORMAT_HTML, array('filter' => true)).'</h2>
+            <p data-ccn="subtitle" class="color-black-mod">'.format_text($this->content->subtitle, FORMAT_HTML, array('filter' => true)).'</p>
+            <a href="/course" style="display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 15.5788px 12.9823px;
+            margin-top:30px;
+            width: 235.78px;
+            height: 62.16px;
+            left: 120px;
+            top: 411.43px;
+            font-size: 17.3098px;
+            background: #0B4F2C;
+            border-radius: 8.6549px;
+            color: #FFFFFF;
+            "><span>Access your courses <svg class="ml10" width="22" height="19" viewBox="0 0 22 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12.678 0.855469L11.4404 2.0611L18.0008 8.64488H0.561157V10.3759H18.0008L11.4404 16.9302L12.678 18.1653L21.3329 9.51037L12.678 0.855469Z" fill="white"/>
+            </svg>
+            </span> </a>
           </div>
         </div>
       </div>
