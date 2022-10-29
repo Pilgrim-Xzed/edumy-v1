@@ -7,8 +7,8 @@ $CFG = new stdClass();
 $CFG->dbtype    = 'mysqli';
 $CFG->dblibrary = 'native';
 $CFG->dbhost    = 'localhost';
-$CFG->dbname    = 'mega';
-$CFG->dbuser    = 'slammad';
+$CFG->dbname    = 'moodle_db';
+$CFG->dbuser    = 'slammo';
 $CFG->dbpass    = 'Slammad42';
 $CFG->prefix    = 'cocoon_';
 $CFG->dboptions = array (
@@ -17,8 +17,8 @@ $CFG->dboptions = array (
   'dbcollation' => 'utf8_general_ci',
 );
 
-$CFG->wwwroot   = 'http://localhost:8888/edumy';
-$CFG->dataroot  = '/Applications/MAMP/moodledata';
+$CFG->wwwroot   = 'http://206.189.233.138';
+$CFG->dataroot  = '/var/www/moodledata/';
 $CFG->admin     = 'admin';
 
 $CFG->directorypermissions = 0777;
