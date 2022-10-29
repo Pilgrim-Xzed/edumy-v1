@@ -210,11 +210,7 @@ class block_cocoon_contact_form extends block_base
     $this->content->text .= '
       			</div>
       			<div class="row">';
-    if ($this->content->style == 0) {
-      $this->content->text .= '<div class="col-lg-6"><div class="h600" id="map-canvas"></div></div>';
-    } elseif ($this->content->style == 1 && $img_item[0]) {
-      $this->content->text .= '<div class="col-lg-6"><img class="img-fluid" src="' . $img_item[0] . '"></div>';
-    }
+
     if ($this->content->style == 0) {
       $this->content->text .= '<div class="col-lg-6 form_grid">';
     } elseif ($this->content->style == 1 && $img_item[0]) {
@@ -259,7 +255,15 @@ class block_cocoon_contact_form extends block_base
                 </form>
       				</div>
       			</div>
-      		</div>
+      		</div>';
+
+    if ($this->content->style == 0) {
+      $this->content->text .= '<div class="col-lg-6"><div class="h600" id="map-canvas"></div></div>';
+    } elseif ($this->content->style == 1 && $img_item[0]) {
+      $this->content->text .= '<div class="col-lg-6"><img class="img-fluid" src="' . $img_item[0] . '"></div>';
+    }
+
+    $this->content->text .= '
       	</section>
         <script>
         document.addEventListener(\'DOMContentLoaded\', function() {
