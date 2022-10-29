@@ -53,13 +53,14 @@
           {{/header_search_icon}}
         </ul>
       </div>
-      
+      <ul class="home5_shop_reg_widget float-right mb0 mt20">
+        {{> theme_edumy/ccn_navbar_user_popup }}
+      </ul>
       <nav class="navbar navbar-expand" aria-label="{{#str}}sitemenubar, admin{{/str}}">
         {{#primarymoremenu}}
           <div class="primary-navigation">
             {{> theme_edumy/ccn_mdl_400/moremenu}}
           </div>
-          
         {{/primarymoremenu}}
         <ul class="navbar-nav d-none d-md-flex my-1 px-1">
           <!-- page_heading_menu -->
@@ -68,9 +69,6 @@
       </nav>
       <ul id="respMenu" class="" data-menu-style="horizontal">
         {{> theme_edumy/ccn_navbar_user }}
-      </ul>
-      <ul class="home5_shop_reg_widget float-right mb0 mt20">
-        {{> theme_edumy/ccn_navbar_user_popup }}
       </ul>
     </nav>
     <!-- End of Responsive Menu -->
