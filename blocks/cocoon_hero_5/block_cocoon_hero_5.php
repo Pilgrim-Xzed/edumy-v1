@@ -105,7 +105,7 @@ class block_cocoon_hero_5 extends block_base {
           <div class="home-text">
             <h2 data-ccn="title" class="color-black-mod" >'.format_text($this->content->title, FORMAT_HTML, array('filter' => true)).'</h2>
             <p data-ccn="subtitle" class="color-black-mod">'.format_text($this->content->subtitle, FORMAT_HTML, array('filter' => true)).'</p>
-            <a href="/course" style="display: flex;
+            <a href="/courses" style="display: flex;
             flex-direction: column;
             align-items: flex-start;
             padding: 15.5788px 12.9823px;
