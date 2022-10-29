@@ -210,11 +210,7 @@ class block_cocoon_contact_form extends block_base
     $this->content->text .= '
       			</div>
       			<div class="row">';
-    if ($this->content->style == 0) {
-      $this->content->text .= '<div class="col-lg-6"><div class="h600" id="map-canvas"></div></div>';
-    } elseif ($this->content->style == 1 && $img_item[0]) {
-      $this->content->text .= '<div class="col-lg-6"><img class="img-fluid" src="' . $img_item[0] . '"></div>';
-    }
+
     if ($this->content->style == 0) {
       $this->content->text .= '<div class="col-lg-6 form_grid">';
     } elseif ($this->content->style == 1 && $img_item[0]) {
@@ -229,26 +225,17 @@ class block_cocoon_contact_form extends block_base
                    <div class="row">
                       <div class="col-sm-12">
                         <div class="form-group">
-                          <label for="name" id="namelabel">' . get_string('your_name', 'theme_edumy') . '</label>
-                          <input class="form-control" id="name" name="name" type="text" title="' . get_string('your_name_requirements', 'theme_edumy') . '" required="required" value="">
+                          <input class="form-control" placeholder="Name" id="name" name="name" type="text" title="' . get_string('your_name_requirements', 'theme_edumy') . '" required="required" value="">
                         </div>
                       </div>
                       <div class="col-sm-12">
                         <div class="form-group">
-                          <label for="email" id="emaillabel">' . get_string('email_address', 'theme_edumy') . '</label>
-                          <input id="email" name="email" type="email" required="required" title="' . get_string('email_address_requirements', 'theme_edumy') . '" value="" class="form-control">
+                          <input id="email" placeholder="Email" name="email" type="email" required="required" title="' . get_string('email_address_requirements', 'theme_edumy') . '" value="" class="form-control">
                        </div>
                      </div>
                      <div class="col-sm-12">
                         <div class="form-group">
-                          <label for="subject" id="subjectlabel">' . get_string('subject', 'theme_edumy') . '</label>
-                          <input id="subject" name="subject" type="text" title="' . get_string('subject_requirements', 'theme_edumy') . '" required="required" class="form-control">
-                       </div>
-                     </div>
-                     <div class="col-sm-12">
-                        <div class="form-group">
-                          <label for="message" id="messagelabel">' . get_string('message', 'theme_edumy') . '</label>
-                          <textarea id="message" name="message" rows="5" title="' . get_string('message_requirements', 'theme_edumy') . '" required="required" class="form-control"></textarea>
+                          <textarea id="message" placeholder="Message" name="message" rows="5" title="' . get_string('message_requirements', 'theme_edumy') . '" required="required" class="form-control"></textarea>
                           <input type="hidden" id="sesskey" name="sesskey" value="">
                           <script>document.getElementById(\'sesskey\').value = M.cfg.sesskey;</script>';
     if ($this->config->recaptcha == 0) {
@@ -261,14 +248,22 @@ class block_cocoon_contact_form extends block_base
     $this->content->text .= '
                         </div>
                         <div class="form-group ui_kit_button mb0">
-                          <button type="submit" name="submit" id="submit" class="btn dbxshad btn-lg btn-thm circle white">' . get_string('send', 'theme_edumy') . '</button>
+                          <button type="submit" name="submit" id="submit" class="btn dbxshad btn-lg btn-thm circle">' . get_string('send', 'theme_edumy') . '</button>
                         </div>
                      <div>
                    </div>
                 </form>
       				</div>
       			</div>
-      		</div>
+      		</div>';
+
+    if ($this->content->style == 0) {
+      $this->content->text .= '<div class="col-lg-6"><div class="h600" id="map-canvas"></div></div>';
+    } elseif ($this->content->style == 1 && $img_item[0]) {
+      $this->content->text .= '<div class="col-lg-6"><img class="img-fluid" src="' . $img_item[0] . '"></div>';
+    }
+
+    $this->content->text .= '
       	</section>
         <script>
         document.addEventListener(\'DOMContentLoaded\', function() {
