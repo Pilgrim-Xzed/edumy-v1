@@ -2,16 +2,6 @@
 defined('MOODLE_INTERNAL') || die();
 include($CFG->dirroot . '/theme/edumy/ccn/ccn_themehandler.php');
 
-// Redirect to the login page if session has expired, only with dbsessions enabled (MDL-35029) to maintain current behaviour.
-if ((!isloggedin() or isguestuser()) && !empty($SESSION->has_timed_out) && !empty($CFG->dbsessions)) {
-  if ($preventredirect) {
-    throw new require_login_session_timeout_exception();
-  } else {
-    $SESSION->wantsurl = $CFG->wwwroot . '/course';
-    redirect(get_login_url());
-  }
-}
-
 if ($course_mainpage_layout_dashboard == '1') {
   array_push($extraclasses, "ccn_context_dashboard");
   $bodyclasses = implode(" ", $extraclasses);
