@@ -1,7 +1,7 @@
 <header class="ccnHeader5 header-nav menu_style_home_five navbar-scrolltofixed stricky main-menu">
   <div class="container-fluid">
     <!-- Ace Responsive Menu -->
-    <nav class="ccn_nav_group">
+    <nav>
       <!-- Menu Toggle btn-->
       <div class="menu-toggle">
         <img class="nav_logo_img img-fluid" src="{{{headerlogo2}}}" alt="{{{sitename}}}">
@@ -14,7 +14,7 @@
       {{#logo}}
         <a href="{{{ ccnLogoUrl }}}" class="navbar_brand float-left dn-smd">
           {{#logo_image}}<img class="logo1 img-fluid" src="{{{headerlogo2}}}" alt="{{{sitename}}}" {{#logo_styles}} style="{{{logo_styles}}}" {{/logo_styles}}>{{/logo_image}}
-        
+          {{#logotype}}<span>{{{sitename}}}</span>{{/logotype}}
         </a>
       {{/logo}}
       <div class="ht_left_widget home5 float-left">
@@ -56,18 +56,8 @@
       <ul class="home5_shop_reg_widget float-right mb0 mt20">
         {{> theme_edumy/ccn_navbar_user_popup }}
       </ul>
-      <nav class="navbar navbar-expand" aria-label="{{#str}}sitemenubar, admin{{/str}}">
-        {{#primarymoremenu}}
-          <div class="primary-navigation">
-            {{> theme_edumy/ccn_mdl_400/moremenu}}
-          </div>
-        {{/primarymoremenu}}
-        <ul class="navbar-nav d-none d-md-flex my-1 px-1">
-          <!-- page_heading_menu -->
-          {{{ output.page_heading_menu }}}
-        </ul>
-      </nav>
-      <ul id="respMenu" class="" data-menu-style="horizontal">
+      <ul id="respMenu" class="ace-responsive-menu" data-menu-style="horizontal">
+        {{{ output.custom_menu }}}
         {{> theme_edumy/ccn_navbar_user }}
       </ul>
     </nav>
