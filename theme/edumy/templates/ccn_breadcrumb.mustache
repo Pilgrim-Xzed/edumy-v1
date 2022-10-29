@@ -22,7 +22,9 @@
       <div class="row">
         <div class="col-xl-12 text-center">
           <div class="breadcrumb_content">
-           
+            {{#if_breadcrumb_title}}
+              <h4 class="breadcrumb_title">{{{ pageheading }}}</h4>
+            {{/if_breadcrumb_title}}
             {{#if_breadcrumb_trail}}
               {{{ output.navbar }}}
             {{/if_breadcrumb_trail}}
