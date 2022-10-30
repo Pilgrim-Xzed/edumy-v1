@@ -59,7 +59,6 @@ class block_cocoon_about_1 extends block_base
         					<div class="about_content">
         						<h3 data-ccn="title">'.format_text($this->content->title, FORMAT_HTML, array('filter' => true)).'</h3>
         						<div data-ccn="body">'.format_text($this->content->body, FORMAT_HTML, array('filter' => true, 'noclean' => true)).'</div>
-                   
         					</div>
         				</div>';
                 if($this->config->image){
