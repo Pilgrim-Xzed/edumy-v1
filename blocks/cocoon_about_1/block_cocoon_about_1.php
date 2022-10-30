@@ -64,7 +64,7 @@ class block_cocoon_about_1 extends block_base
                     align-items: flex-start;
                     padding: 15.5788px 12.9823px;
                     margin-top:30px;
-                    width: 172.18px;
+                    width: 182.18px;
                     height: 62.16px;
                     left: 120px;
                     top: 411.43px;
