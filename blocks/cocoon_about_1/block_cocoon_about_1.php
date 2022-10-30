@@ -59,23 +59,7 @@ class block_cocoon_about_1 extends block_base
         					<div class="about_content">
         						<h3 data-ccn="title">'.format_text($this->content->title, FORMAT_HTML, array('filter' => true)).'</h3>
         						<div data-ccn="body">'.format_text($this->content->body, FORMAT_HTML, array('filter' => true, 'noclean' => true)).'</div>
-                    <a href="#" style="display: flex;
-                    flex-direction: column;
-                    align-items: flex-start;
-                    padding: 15.5788px 12.9823px;
-                    margin-top:30px;
-                    width: 192.18px;
-                    height: 62.16px;
-                    left: 120px;
-                    top: 411.43px;
-                    font-size: 17.3098px;
-                    background: #0B4F2C;
-                    border-radius: 8.6549px;
-                    color: #FFFFFF;
-                    "><span>Partner with us <svg class="ml10" width="22" height="19" viewBox="0 0 22 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12.678 0.855469L11.4404 2.0611L18.0008 8.64488H0.561157V10.3759H18.0008L11.4404 16.9302L12.678 18.1653L21.3329 9.51037L12.678 0.855469Z" fill="white"/>
-                    </svg>
-                    </span> </a>
+                   
         					</div>
         				</div>';
                 if($this->config->image){
