@@ -475,12 +475,7 @@ class course_renderer extends \core_course_renderer {
 
                          </div>
                          </div>
-                         <div class="tc_footer">
-                           <ul class="tc_meta float-left">
-                             <li class="list-inline-item"><i class="flaticon-book"></i></li>
-                             <li class="list-inline-item">'.$ccn_items_count.'</li>
-                           </ul>
-                         </div>
+                         
 
              </div>
            </div>';
